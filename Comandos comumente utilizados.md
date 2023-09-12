@@ -1,28 +1,40 @@
-## Uso do Commit
+# Uso do Init.
+Para iniciar um projeto com GIT, abriremos o terminal, e iremos para o diretório de trabalho, ou seja, onde temos nosso projeto e, a partir daí, executaremos o comando:
+- `git init`.
+Este comando só é executado uma vez, no início de nosso projeto ou quando queremos que o GIT comece a acompanhar nosso projeto.
+# Uso do Add.
+Para cada mudança que fazemos no repositório local, nós iremos realizar um "commit" das nossas mudanças. Para realizar esta etapa por sua parte, devemos antes adcionar os arquivos que forem modificados a área de "staging".
+Para fazer isso podemos utilizar o comando:
+- `git add .`.
+Este irá adcionar todos os arquivos modificado à área de "staging".
+- `git add <nome_do_arquivo>`.
+Este irá adcionar somente os arquivos escolhidos.
+# Uso do Commit.
 Para fazer uma captura do estado atual da área de staging, executaremos o comando de "commit".
 Devemos também acrescentar uma descrição para o "commit" vamos utilizar a flag ``-m`` seguido da descrição entre aspas duplas.
 
 - ``git commit -m "Descrição da versão" ``
 
 Agora temos uma "imagem" do do projeto, ou seja, uma cópia do nosso código desde o último commit até o momento atual.
-
-## Uso do Status
+Se quisermos adcionar todos os arquivos a staging area e realizar um "commit", podemos utilizar o comando:
+- `git commit -am "Descrição do commit"`
+# Uso do Status.
 Utilizando o comando:
 - ``git status -s``.
 Esta será a pasta que o GIT utilizará para criar áreas locais de staging do repositório.
 
-## Uso do log
+# Uso do log.
 Para obter uma lista de todas as cópias que temos no repositório local, usaremos o comando:
 - ``git log -online``
 
-## Uso do Reset
+# Uso do Reset.
 Se quisermos restaurar o arquivo para uma versão anterior que tínhamos, ou seja, restaurar o arquivo, deveríamos usar o comando:
 
 - ``git reset --hard 09f1c5``
 Como podemos ver, temos que passar o código alfanumérico do commit que queremos recuperar.
 Deve-se notar que, tendo voltado para um commit anterior que tivemos, as próximas versões que foram criadas após esse momento não existirão mais. Em outras palavras, podemos voltar a uma versão anterior, mas uma vez que fazemos isso, perdemos todas as versões após essa versão.
 
-## Uso de Push
+# Uso de Push.
 O comando "push" é usado para enviar conteúdo do repositório local para o remoto.
 Sintaxe: git push <remote> <branch>
 - `git push`
